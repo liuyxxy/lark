@@ -1,0 +1,1178 @@
+library(s22dpllsys500_ana_core_lib_ff_ff_0p63lv_1p66hv_125c_rcmax_fs_tpl_PVT005irdrpAULP){
+	define ("add_pg_pin_to_lib", "library", "boolean");
+	delay_model : "table_lookup";
+	library_features("report_delay_calculation", "report_power_calculation");
+	date : "20210930 15:32:38";
+	revision : "VERSION";
+	current_unit : "1mA";
+	pulling_resistance_unit : "1kohm";
+	time_unit : "1ns";
+	voltage_unit : "1V";
+	capacitive_load_unit("1", "pf");
+	leakage_power_unit : "1nW";
+	in_place_swap_mode : "match_footprint";
+	default_inout_pin_cap : "0";
+	default_input_pin_cap : "0";
+	default_output_pin_cap : "0";
+	default_fanout_load : "1";
+	input_threshold_pct_rise : "50";
+	input_threshold_pct_fall : "50";
+	output_threshold_pct_rise : "50";
+	output_threshold_pct_fall : "50";
+	slew_derate_from_library : "0.5";
+	slew_lower_threshold_pct_rise : "30";
+	slew_lower_threshold_pct_fall : "30";
+	slew_upper_threshold_pct_rise : "70";
+	slew_upper_threshold_pct_fall : "70";
+	default_cell_leakage_power : "0";
+	nom_voltage : "0.63";
+	nom_temperature : "125";
+	nom_process : "0.999998";
+	voltage_map("VDD", "0.63");
+	voltage_map("VDDPQ", "0.63");
+	voltage_map("VDDDCRO", "0.63");
+	voltage_map("VDD1V8", "1.66");
+	voltage_map("VSS_SUB", "0");
+	voltage_map("VSS", "0");
+	add_pg_pin_to_lib : true;
+	bus_naming_style : "%s[%d]";
+	comment : "Copyright 1997-2019 by Synopsys, Inc., All Rights Reserved.";
+	default_leakage_power_density : "0";
+	default_max_fanout : "50";
+	default_max_transition : "2";
+	default_threshold_voltage_group : "HVT40";
+	k_process_cell_leakage_power : "0";
+	k_process_internal_power : "0";
+	k_temp_cell_fall : "0";
+	k_temp_cell_leakage_power : "0";
+	k_temp_cell_rise : "0";
+	k_temp_fall_propagation : "0";
+	k_temp_fall_transition : "0";
+	k_temp_hold_fall : "0";
+	k_temp_hold_rise : "0";
+	k_temp_internal_power : "0";
+	k_temp_rise_propagation : "0";
+	k_temp_rise_transition : "0";
+	k_temp_setup_fall : "0";
+	k_temp_setup_rise : "0";
+	k_volt_cell_fall : "0";
+	k_volt_cell_leakage_power : "0";
+	k_volt_cell_rise : "0";
+	k_volt_fall_propagation : "0";
+	k_volt_fall_transition : "0";
+	k_volt_hold_fall : "0";
+	k_volt_hold_rise : "0";
+	k_volt_internal_power : "0";
+	k_volt_rise_propagation : "0";
+	k_volt_rise_transition : "0";
+	k_volt_setup_fall : "0";
+	k_volt_setup_rise : "0";
+	operating_conditions("s22sc7thvt40_ff_xx_0p63lv_125c_rcmax_fs_tpl_PVT005irdrpAULP"){
+		process : 0.999998;
+		temperature : 125;
+		voltage : 0.63;
+		tree_type : "best_case_tree";
+	}
+	scaling_factors("library_global"){
+		k_process_cell_leakage_power : 0;
+		k_process_internal_power : 0;
+		k_temp_cell_fall : 0;
+		k_temp_cell_leakage_power : 0;
+		k_temp_cell_rise : 0;
+		k_temp_fall_propagation : 0;
+		k_temp_fall_transition : 0;
+		k_temp_hold_fall : 0;
+		k_temp_hold_rise : 0;
+		k_temp_internal_power : 0;
+		k_temp_rise_propagation : 0;
+		k_temp_rise_transition : 0;
+		k_temp_setup_fall : 0;
+		k_temp_setup_rise : 0;
+		k_volt_cell_fall : 0;
+		k_volt_cell_leakage_power : 0;
+		k_volt_cell_rise : 0;
+		k_volt_fall_propagation : 0;
+		k_volt_fall_transition : 0;
+		k_volt_hold_fall : 0;
+		k_volt_hold_rise : 0;
+		k_volt_internal_power : 0;
+		k_volt_rise_propagation : 0;
+		k_volt_rise_transition : 0;
+		k_volt_setup_fall : 0;
+		k_volt_setup_rise : 0;
+	}
+	type("BUS_10_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 10;
+		bit_from : 9;
+		bit_to : 0;
+		downto : true;
+	}
+	type("BUS_14_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 14;
+		bit_from : 13;
+		bit_to : 0;
+		downto : true;
+	}
+	type("BUS_16_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 16;
+		bit_from : 15;
+		bit_to : 0;
+		downto : true;
+	}
+	type("BUS_2_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 2;
+		bit_from : 1;
+		bit_to : 0;
+		downto : true;
+	}
+	type("BUS_32_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 32;
+		bit_from : 31;
+		bit_to : 0;
+		downto : true;
+	}
+	type("BUS_3_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 3;
+		bit_from : 2;
+		bit_to : 0;
+		downto : true;
+	}
+	type("BUS_4_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 4;
+		bit_from : 3;
+		bit_to : 0;
+		downto : true;
+	}
+	type("BUS_9_0"){
+		base_type : "array";
+		data_type : "bit";
+		bit_width : 9;
+		bit_from : 8;
+		bit_to : 0;
+		downto : true;
+	}
+	cell("s22dpllsys500_ana_core"){
+		area : 100000;
+		scaling_factors : "library_global";
+		dont_touch : true;
+		dont_use : true;
+		interface_timing : true;
+		is_macro_cell : true;
+		pg_pin(VDDDCRO){
+			voltage_name : "VDDDCRO";
+			pg_type : "internal_power";
+			direction : "output";
+		}
+		pg_pin(VDDPQ){
+			voltage_name : "VDDPQ";
+			pg_type : "internal_power";
+			direction : "output";
+		}
+		pg_pin(VDD){
+			voltage_name : "VDD";
+			pg_type : "primary_power";
+		}
+		pg_pin(VSS){
+			voltage_name : "VSS";
+			pg_type : "primary_ground";
+		}
+		pg_pin(VDD1V8){
+			voltage_name : "VDD1V8";
+			pg_type : "primary_power";
+		}
+		pg_pin("VSS_SUB"){
+			voltage_name : "VSS_SUB";
+			pg_type : "primary_ground";
+		}
+		bus("amux_sel_i"){
+			bus_type : "BUS_3_0";
+			direction : "input";
+			pin("amux_sel_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_power_pin : "VDD";
+				related_ground_pin : "VSS";
+			}
+			pin("amux_sel_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_power_pin : "VDD";
+				related_ground_pin : "VSS";
+			}
+			pin("amux_sel_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_ground_pin : "VSS";
+				related_power_pin : "VDD";
+			}
+		}
+		bus("col_dco_i"){
+			bus_type : "BUS_9_0";
+			direction : "input";
+			pin("col_dco_i[8]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[7]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[6]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[5]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[4]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("col_dco_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("ctrl_fine_dco_i"){
+			bus_type : "BUS_32_0";
+			direction : "input";
+			pin("ctrl_fine_dco_i[31]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[30]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[29]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[28]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[27]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[26]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[25]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[24]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[23]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[22]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[21]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[20]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[19]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[18]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[17]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[16]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[15]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[14]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[13]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[12]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[11]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[10]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[9]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[8]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[7]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[6]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[5]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[4]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ctrl_fine_dco_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("en_ivr_i"){
+			bus_type : "BUS_2_0";
+			direction : "input";
+			pin("en_ivr_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_ground_pin : "VSS";
+				related_power_pin : "VDD";
+			}
+			pin("en_ivr_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_ground_pin : "VSS";
+				related_power_pin : "VDD";
+			}
+		}
+		bus("ivr_trim_i"){
+			bus_type : "BUS_4_0";
+			direction : "input";
+			pin("ivr_trim_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_ground_pin : "VSS";
+				related_power_pin : "VDD";
+			}
+			pin("ivr_trim_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_ground_pin : "VSS";
+				related_power_pin : "VDD";
+			}
+			pin("ivr_trim_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_power_pin : "VDD";
+				related_ground_pin : "VSS";
+			}
+			pin("ivr_trim_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+				related_power_pin : "VDD";
+				related_ground_pin : "VSS";
+			}
+		}
+		bus("kdiv_sel_pq_i"){
+			bus_type : "BUS_3_0";
+			direction : "input";
+			pin("kdiv_sel_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("kdiv_sel_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("kdiv_sel_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("ld_clk_sel_pq_i"){
+			bus_type : "BUS_3_0";
+			direction : "input";
+			pin("ld_clk_sel_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ld_clk_sel_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("ld_clk_sel_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("pdiv_sel_pq_i"){
+			bus_type : "BUS_3_0";
+			direction : "input";
+			pin("pdiv_sel_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pdiv_sel_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pdiv_sel_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("pll_dutycal_ctrl_osc_pq_i"){
+			bus_type : "BUS_16_0";
+			direction : "input";
+			pin("pll_dutycal_ctrl_osc_pq_i[15]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[14]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[13]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[12]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[11]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[10]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[9]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[8]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[7]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[6]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[5]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[4]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_ctrl_osc_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("pll_dutycal_trim_n_pq_i"){
+			bus_type : "BUS_32_0";
+			direction : "input";
+			pin("pll_dutycal_trim_n_pq_i[31]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[30]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[29]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[28]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[27]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[26]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[25]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[24]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[23]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[22]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[21]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[20]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[19]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[18]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[17]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[16]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[15]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[14]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[13]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[12]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[11]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[10]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[9]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[8]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[7]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[6]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[5]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[4]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_n_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("pll_dutycal_trim_p_pq_i"){
+			bus_type : "BUS_32_0";
+			direction : "input";
+			pin("pll_dutycal_trim_p_pq_i[31]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[30]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[29]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[28]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[27]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[26]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[25]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[24]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[23]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[22]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[21]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[20]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[19]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[18]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[17]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[16]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[15]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[14]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[13]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[12]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[11]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[10]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[9]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[8]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[7]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[6]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[5]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[4]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pll_dutycal_trim_p_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("pq_frac_pq_o"){
+			bus_type : "BUS_3_0";
+			direction : "output";
+			pin("pq_frac_pq_o[2]"){
+				max_capacitance : "5";
+			}
+			pin("pq_frac_pq_o[1]"){
+				max_capacitance : "5";
+			}
+			pin("pq_frac_pq_o[0]"){
+				max_capacitance : "5";
+			}
+		}
+		bus("pq_int_4ld_pq_i"){
+			bus_type : "BUS_10_0";
+			direction : "input";
+			pin("pq_int_4ld_pq_i[9]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[8]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[7]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[6]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[5]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[4]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("pq_int_4ld_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("pq_int_pq_o"){
+			bus_type : "BUS_10_0";
+			direction : "output";
+			pin("pq_int_pq_o[9]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[8]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[7]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[6]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[5]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[4]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[3]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[2]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[1]"){
+				max_capacitance : "5";
+			}
+			pin("pq_int_pq_o[0]"){
+				max_capacitance : "5";
+			}
+		}
+		bus("row_dco_i"){
+			bus_type : "BUS_14_0";
+			direction : "input";
+			pin("row_dco_i[13]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[12]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[11]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[10]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[9]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[8]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[7]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[6]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[5]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[4]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("row_dco_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		bus("tst_ext_pq_i"){
+			bus_type : "BUS_4_0";
+			direction : "input";
+			pin("tst_ext_pq_i[3]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("tst_ext_pq_i[2]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("tst_ext_pq_i[1]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+			pin("tst_ext_pq_i[0]"){
+				capacitance : "0.05";
+				max_transition : "4";
+			}
+		}
+		pin("clkr_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("fdsm_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("fpll_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("fpllt_mux_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("fref_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("kdiv_ready_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("lock_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("pdiv_ready_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("pll_ana_ao"){
+			direction : "output";
+			is_analog : true;
+			max_capacitance : "1.5";
+			power_down_function : "!VDD      + VSS";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+		}
+		pin("pll_dutycal_bbpd_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("pll_dutycal_clk_osc_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("pllt_fckr_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("skip_edge_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("tie_ana_dco_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("tie_ana_pq_o"){
+			direction : "output";
+			max_capacitance : "5";
+		}
+		pin("bypass_bistdiv_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("enps_1v8_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+		}
+		pin("ivr_trim_burnin_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+		}
+		pin("ld_resn_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("pdiv_byp_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("pll_amux_en_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+		}
+		pin("pll_byp_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("pll_cap_dis_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+		}
+		pin("pll_dutycal_en_ring_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("pll_dutycal_resn_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("pll_en_dutycal_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("pll_lpf_bp_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+		}
+		pin("pllt_fckr_en_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("ref_clk_ana_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("resn_cnt_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("resn_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("sel_bnk_dco_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("sel_fdsm_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("sel_phs_v2_pq_i"){
+			capacitance : "0.05";
+			direction : "input";
+			max_transition : "4";
+		}
+		pin("vref_0v6_ai"){
+			capacitance : "0.05";
+			direction : "input";
+			is_analog : true;
+			max_transition : "2.0";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+		}
+	}
+	default_operating_conditions : "s22sc7thvt40_ff_xx_0p63lv_125c_rcmax_fs_tpl_PVT005irdrpAULP";
+}
+
+
+
+
+
+
+
+
+
