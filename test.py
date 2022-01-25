@@ -6,9 +6,6 @@ grammar = r"""
           | list
           | string
           | SIGNED_NUMBER      -> number
-          | "true"             -> true
-          | "false"            -> false
-          | "null"             -> null
 
     list : "[" [value ("," value)*] "]"
 
